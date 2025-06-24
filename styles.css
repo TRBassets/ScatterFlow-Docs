@@ -1,0 +1,73 @@
+:root{
+  --bg:#0e1117;          --bg-dark:#161b22;     --bg-darker:#0b0d11;
+  --fg:#e6edf3;          --fg-muted:#8b949e;
+  --primary:#e97616;     --primary-alt:#f29f4b; --link-hover:#06b6d4;
+  --radius:12px;         --tr:.45s cubic-bezier(.4,0,.2,1);
+  --sidebar:240px;
+}
+
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;background:var(--bg);color:var(--fg);font-family:"Inter",sans-serif;line-height:1.55;}
+body{display:flex;min-height:100vh}
+
+/* ───── Sidebar (now hidden, but keep original styling for completeness) ───── */
+nav{width:var(--sidebar);background:var(--bg-dark);border-right:1px solid var(--bg-darker);padding:2rem 1rem;position:sticky;top:0;height:100vh;overflow-y:auto}
+nav h1{font-size:1.25rem;margin-bottom:1.2rem}
+nav ul{list-style:none;padding:0}
+nav li{margin:.25rem 0}
+nav a{display:block;padding:.45rem .8rem;border-radius:var(--radius);color:var(--fg-muted);text-decoration:none;transition:background var(--tr),color var(--tr)}
+nav a:hover{color:var(--link-hover)}
+nav a.active{background:var(--primary);color:#fff}
+
+/* ───── Panels ───── */
+main{flex:1;padding:2rem clamp(1rem,5vw,4rem)}
+details{border:1px solid var(--bg-darker);border-radius:var(--radius);margin-bottom:1.25rem;background:var(--bg-dark)}
+summary{display:flex;align-items:center;gap:.6rem;cursor:pointer;padding:1rem 1.2rem;font-size:1.05rem;font-weight:600;user-select:none}
+summary::marker{display:none}
+summary svg{flex-shrink:0;fill:var(--primary-alt);transition:transform var(--tr),fill var(--tr)}
+summary:hover svg{fill:var(--link-hover)}
+details[open]>summary svg{transform:rotate(90deg)}
+details .content{overflow:hidden;max-height:0;opacity:0;transform:translateY(-6px);transition:max-height var(--tr),opacity var(--tr),transform var(--tr);padding:0 1.2rem}
+details[open] .content{padding-bottom:1.6rem;max-height:9999px;opacity:1;transform:translateY(0)}
+
+/* ───── Setting Lists ───── */
+.setting-list{list-style:none;padding:0}
+.setting-list li+li{border-top:1px solid rgba(255,255,255,.5);margin-top:.7rem;padding-top:.7rem}
+.setting{display:flex;align-items:flex-start;gap:.8rem;flex-wrap:wrap}
+.setting img:not(.setting-placeholder){flex:0 0 40px;height:40px;border-radius:var(--radius);object-fit:cover}
+
+/* Tool description */
+.tool-desc{color:var(--primary-alt);margin:.4rem 0 .8rem;font-style:italic}
+
+/* Placeholders */
+.section-placeholder,
+.setting-placeholder,
+.qs-placeholder{
+  width:75%;
+  max-width:680px;
+  border-radius:var(--radius);
+  display:block;
+  margin:.5rem 0 1rem;
+  background:var(--bg-darker);
+}
+.setting-placeholder{margin-top:.4rem}
+
+/* Quick‑start list tweaks */
+.qs-list{padding-left:1.25rem;margin:0}
+.qs-heading{margin:1rem 0 .6rem;font-weight:600}
+
+/* Code highlight */
+code,pre{background:var(--bg-darker);padding:.25rem .5rem;border-radius:6px;font-family:"JetBrains Mono",monospace}
+
+/* Mobile nav toggle (now unnecessary, but harmless) */
+@media(max-width:680px){
+  nav{position:fixed;transform:translateX(-100%);transition:transform var(--tr)}
+  body.menu-visible nav{transform:translateX(0)}
+  main{padding:2rem 1rem}
+}
+
+/* ─── Layout tweaks: hide sidebar, realign summaries ─── */
+nav{display:none}          /* hide the sidebar entirely              */
+body{display:block}        /* return body to normal flow             */
+summary{gap:0}             /* remove leftover gap from hidden icon   */
+summary svg{display:none}  /* hide the dropdown arrow icon           */

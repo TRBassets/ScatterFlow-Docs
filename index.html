@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScatterFlow – User Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ───── Main Content ───── -->
+  <main>
+    <!-- INSTALL -->
+    <details id="install">
+      <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Installation</summary>
+      <div class="content">
+        <!-- Blender 4.4 Extensions installation -->
+        <ol>
+          <li>Download the ScatterFlow.zip file </li>
+          <li>In <strong>Blender 4.4</strong>, open <em>Edit ▸ Preferences ▸ <b>Extensions</b></em> and select <strong>Install from disk</strong>.</li>
+        </ol>
+
+        <!-- Asset‑Library registration -->
+        <h4 style="margin:1.2rem 0 .6rem">Add ScatterFlow assets in the Asset Library</h4>
+        <ol>
+          <li>Navigate to <em>Edit ▸ Preferences ▸ File Paths ▸ Asset Libraries</em>.</li>
+          <li>Select the <strong>+</strong> icon to create a new library entry.</li>
+          <li>Choose the directory containing <code>ScatterFlow Assets.blend</code>
+          <li>Click <strong>Save Preferences</strong> to store the path.</li>
+        </ol>
+      </div>
+    </details>
+
+    <!-- QUICK START -->
+    <details id="quickstart">
+      <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Quick Start</summary>
+      <div class="content">
+
+        <!-- Drop objects -->
+        <h4 class="qs-heading">Drop objects</h4>
+        <img src="media/Animation.gif" alt="Drop objects example" class="qs-placeholder">
+        <ol class="qs-list">
+          <li>Navigate to <strong>Tools &gt; Simulation Tools</strong>.</li>
+          <li>Select the floor (or any collision surface) and click <strong>Set Passive</strong>.</li>
+          <li>Select your objects and click <strong>Add Physics</strong>.</li>
+          <li>Press <kbd>Space</kbd> to play the simulation.</li>
+        </ol>
+
+        <!-- Spawning objects -->
+        <h4 class="qs-heading">Spawning objects</h4>
+        <img src="media/quick drop.gif" alt="Add Tool example" class="qs-placeholder">
+        <ol class="qs-list">
+          <li>Click <strong>Add Tool</strong> to add the spawning sphere.</li>
+          <li>Select the desired collection from <strong>Source Collection</strong>.</li>
+          <li>Navigate to <strong>Spawning &gt; Quick Spawn</strong>.</li>
+          <li>Press <strong>Spawn Instances</strong>.</li>
+          <li>Ensure a passive floor or objects exist so the instances collide with something.</li>
+        </ol>
+      </div>
+    </details>
+
+    <!-- FEATURES -->
+    <details id="features">
+      <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Features</summary>
+      <div class="content">
+
+        <!-- SPAWNING -->
+        <details id="feat-spawn" open>
+          <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><strong>Spawning</strong></summary>
+          <div class="content">
+
+            <!-- Quick Spawn -->
+            <details open>
+              <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><em>Quick Spawn</em></summary>
+              <div class="content">
+                <p class="tool-desc">Generate instances from a spawn sphere with physics already applied.</p>
+                <img src="media/quick spawn.gif" alt="Quick Spawn overview" class="section-placeholder">
+
+                <ul class="setting-list">
+                  <li class="setting">
+                    <div><strong>Count</strong> – number of objects generated per click.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Scale Min/Max</strong> – size range.</div>
+                  </li>
+                  <li class="setting">
+                    <img src="media/continous spawning.gif" alt="Infinite spawn setting example" class="setting-placeholder">
+                    <div><strong>∞ Spawn</strong> – continuous spawning during playback.<br><strong>Rate</strong> – objects per second.</div>
+                  </li>
+                  <li class="setting">
+                    <img src="media/random roations.gif" alt="Random rotation setting example" class="setting-placeholder">
+                    <div><strong>Random Rotation</strong> – if on, spawns objects with randomised orientation; if off, uses applied rotation.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Randomize Selected</strong> – deletes the spawned objects and generates only the selected objects.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Randomize All</strong> – deletes the spawned objects and generates a new set.</div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Surface Scatter -->
+            <details>
+              <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><em>Surface Scatter</em></summary>
+              <div class="content">
+                <p class="tool-desc">Scatter objects across a surface.</p>
+                <img src="media/SCATTERSRUFACEDEMOV3-ezgif.com-optimize.gif" alt="Surface Scatter overview" class="section-placeholder">
+
+                <ul class="setting-list">
+                  <li class="setting">
+                    <div><strong>Target Mesh</strong> – surfaces that objects will spawn on.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Count</strong> – number of objects scattered.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Random Rot</strong> – randomised orientation.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Skip Rigid Bodies</strong> – spawn objects without physics applied.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Randomize Selected</strong> – deletes the spawned objects and generates only the selected objects.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Randomize All</strong> – deletes the spawned objects and generates a new set.</div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Array Spawn -->
+            <details>
+              <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><em>Array Spawn</em></summary>
+              <div class="content">
+                <p class="tool-desc">Create structured grids of instances for organised layouts.</p>
+                <img src="media/ARRAYDEMOV5-ezgif.com-optimize.gif" alt="Array Spawn overview" class="section-placeholder">
+
+                <ul class="setting-list">
+                  <li class="setting">
+                    <div><strong>Count X/Y/Z</strong> – how many object rows are spawned.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Gap X/Y/Z</strong> – spacing between objects.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Scale Min/Max</strong> – size variation.</div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+          </div>
+        </details>
+
+        <!-- OpenScatter -->
+        <details>
+          <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><strong>OpenScatter</strong></summary>
+          <div class="content">
+            <p>ScatterFlow integrates with <strong>OpenScatter</strong> for traditional scattering workflows. To view the official OpenScatter documentation, <a href="#" target="_blank">click here</a>.</p>
+          </div>
+        </details>
+
+        <!-- TOOLS -->
+        <details id="feat-tools" open>
+          <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><strong>Tools</strong></summary>
+          <div class="content">
+
+            <!-- Manipulation Tool -->
+            <details open>
+              <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><em>Manipulation Tool (Force‑Field)</em></summary>
+              <div class="content">
+                <p class="tool-desc">Interactively pick up, release, drag and throw rigid‑body objects using a configurable force field.</p>
+                <img src="media/maniplulkatedemo-ezgif.com-optimize.gif" alt="Manipulation Tool overview" class="section-placeholder">
+
+                <ul class="setting-list">
+                  <li class="setting">
+                    <div><strong>Dynamic Pickup</strong> – toggles field strength for grabbing or releasing objects.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Drag</strong> – Sets the strength value to -500 for dragging objects .</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Strength</strong> – Controls how strong the attraction force is.</div>
+                  </li>
+                  <li class="setting">
+                    <div>Quick tip: press <kbd>U</kbd> – switch between pickup and drop modes.</div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Simulation Helpers -->
+            <details>
+              <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><em>Simulation Tools</em></summary>
+              <div class="content">
+                <p class="tool-desc">Tool for managing or adjusting your simulated objects</p>
+
+                <ul class="setting-list">
+                  <li class="setting">
+                    <div><strong>Add Physics</strong> – Add physics to selected objects.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Set Passive</strong> – Turns selected objects into a static collision object.</div>
+                  </li>
+                  <li class="setting">
+                    <img src="media/duplicate.gif" alt="Infinite spawn setting example" class="setting-placeholder">
+                    <div><strong>Duplicate</strong> – Duplicates the selected objects.</div>
+                  </li>
+                  <li class="setting">
+                    <img src="media/move.gif" alt="Infinite spawn setting example" class="setting-placeholder">
+                    <div><strong>Move</strong> – enable Objects to be moved. (Must pause before enabling).</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Freeze</strong> – converts selected active physics objects to passive. Useful for freezing selected objects in place when finished.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Remove Physics</strong> – Completely removes physics from selected objects.</div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Quick Array Grid -->
+            <details>
+              <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><em>Quick Array Grid</em></summary>
+              <div class="content">
+                <p class="tool-desc">An alternative tool to array spawning. This tool allows you to quickly array a single object.</p>
+                <img src="media/quick array.gif" alt="Quick Array Grid overview" class="section-placeholder">
+
+                <ul class="setting-list">
+                  <li class="setting">
+                    <div><strong>Count X/Y/Z</strong> – how many object rows are spawned.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Gap X/Y/Z</strong> – spacing between objects.</div>
+                  </li>
+                  <li class="setting">
+                    <div>Note: Quick array objects do not include physics. Select and press the add physics button to add physics.</div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Cloth Tools -->
+            <details>
+              <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><em>Cloth Tools</em></summary>
+              <div class="content">
+                <p class="tool-desc">Tools for managing your cloth simulation.</p>
+                <img src="media/clothdemo-ezgif.com-optimize.gif" alt="Cloth Tools overview" class="section-placeholder">
+
+                <ul class="setting-list">
+                  <li class="setting">
+                    <div><strong>Add Cloth</strong> – Adds a cloth simulation to the selected objects.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Add Collisions</strong> – create colliders for cloth objects.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Remove Collisions</strong> – remove colliders from the selected objects.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Apply Cloth</strong> – Applies the cloth simulation.</div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+          </div>
+        </details>
+
+        <!-- ADVANCED -->
+        <details id="feat-advanced" open>
+          <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><strong>Advanced</strong></summary>
+          <div class="content">
+
+            <details open>
+              <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><em>Advanced Settings</em></summary>
+              <div class="content">
+                <ul class="setting-list">
+                  <li class="setting">
+                    <img src="media/split impulse.gif" alt="Infinite spawn setting example" class="setting-placeholder">
+                    <div><strong>Split Impulse</strong> – Reduces physics velocity applied to objects. Off = more explosive force / On = less force.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Friction/Bounce</strong> – Adjusts the level of friction and bounce of objects.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Collision Shape</strong> – adjusts the collision type for each object. Convex hull = faster but less accurate, Mesh = slower but more accurate.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Set as Default</strong> – save current parameters as defaults for newly spawned objects.</div>
+                  </li>
+                  <li class="setting">
+                    <div><strong>Origin Tools</strong> – quickly switch the origin to center or base of objects; helpful for scattering vs. simulation tasks.</div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+          </div>
+        </details>
+
+      </div><!-- /features content -->
+    </details>
+
+    <!-- ISSUES -->
+    <details id="issues">
+      <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Common Issues</summary>
+      <div class="content">
+        <ul class="setting-list">
+          <li class="setting">
+            <div><strong>Objects pass through floor</strong> – ensure the floor object is set to <em>Passive</em> and that its <strong>Collision Shape</strong> is appropriate (e.g. BOX for cubes, MESH for complex geometry).</div>
+          </li>
+          <li class="setting">
+            <div><strong>Pile explodes on impact</strong> – lower <em>Bounce</em> (<code>phystool_adjust_bounce</code>) and enable <em>Split Impulse</em>.</div>
+          </li>
+          <li class="setting">
+            <div><strong>Viewport performance is reduced</strong> – activate <em>Link Mesh Data</em> for instancing or <em>Skip Rigid Bodies</em> for static decoration.</div>
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- FAQ -->
+    <details id="faq">
+      <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>FAQ &amp; Tips</summary>
+      <div class="content">
+        <p><strong>Q:</strong> How do I replay the simulation?<br><strong>A:</strong> Scrub the timeline or press <kbd>Space</kbd>—Blender automatically caches the rigid‑body simulation.</p>
+        <p><strong>Q:</strong> Can I use custom force curves?<br><strong>A:</strong> Convert the spawn sphere to a force‑field (<em>Swap Tool</em>) and adjust <em>Strength</em> and <em>Flow</em>.</p>
+      </div>
+    </details>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
