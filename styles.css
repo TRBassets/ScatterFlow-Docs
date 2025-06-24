@@ -1,3 +1,4 @@
+/* styles.css */
 :root{
   --bg:#0e1117;          --bg-dark:#161b22;     --bg-darker:#0b0d11;
   --fg:#e6edf3;          --fg-muted:#8b949e;
@@ -66,8 +67,6 @@ code,pre{background:var(--bg-darker);padding:.25rem .5rem;border-radius:6px;font
   main{padding:2rem 1rem}
 }
 
-/* ─── Layout tweaks: hide sidebar, realign summaries ─── */
-nav{display:none}          /* hide the sidebar entirely              */
-body{display:block}        /* return body to normal flow             */
-summary{gap:0}             /* remove leftover gap from hidden icon   */
-summary svg{display:none}  /* hide the dropdown arrow icon           */
+/* ─── Layout tweaks: hide sidebar ─── */
+nav{display:none}      /* hide the sidebar entirely            */
+body{display:block}    /* return body to normal flow           */
