@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +17,8 @@
       <div class="content">
         <!-- Blender 4.4 Extensions installation -->
         <ol>
-          <li>Download the ScatterFlow.zip file </li>
-          <li>In <strong>Blender 4.4</strong>, open <em>Edit ▸ Preferences ▸ <b>Extensions</b></em> and select <strong>Install from disk</strong>.</li>
+          <li>Download the <code>ScatterFlow.zip</code> file.</li>
+          <li>In <strong>Blender 4.4</strong>, open <em>Edit ▸ Preferences ▸ <b>Extensions</b></em> and select <strong>Install from Disk</strong>.</li>
         </ol>
 
         <!-- Asset‑Library registration -->
@@ -25,7 +26,7 @@
         <ol>
           <li>Navigate to <em>Edit ▸ Preferences ▸ File Paths ▸ Asset Libraries</em>.</li>
           <li>Select the <strong>+</strong> icon to create a new library entry.</li>
-          <li>Choose the directory containing <code>ScatterFlow Assets.blend</code>
+          <li>Choose the directory containing <code>ScatterFlow Assets.blend</code>.</li>
           <li>Click <strong>Save Preferences</strong> to store the path.</li>
         </ol>
       </div>
@@ -55,6 +56,28 @@
           <li>Navigate to <strong>Spawning &gt; Quick Spawn</strong>.</li>
           <li>Press <strong>Spawn Instances</strong>.</li>
           <li>Ensure a passive floor or objects exist so the instances collide with something.</li>
+        </ol>
+
+
+        <h4 class="qs-heading">Array Spawning</h4>
+        <img src="media\array spawning.gif" alt="Add Tool example" class="qs-placeholder">
+        <ol class="qs-list">
+          <li>Click <strong>Add Tool</strong> Then click<strong> Swap Tool</strong> to swap to the array tool </li>
+          <li>Select the desired collection from <strong>Source Collection</strong>.</li>
+          <li>Navigate to <strong>Spawning &gt; Array Spawning</strong>.</li>
+          <li>Press <strong>Spawn Instances</strong>.</li>
+          <li>Ensure a passive floor or objects exist so the instances collide with something.</li>
+        </ol>
+
+
+        <h4 class="qs-heading">Manipulate Objects</h4>
+        <img src="media\Maniupulate objects.gif" alt="Add Tool example" class="qs-placeholder">
+        <ol class="qs-list">
+          <li>Click <strong>Add Tool</strong> Then click<strong> Swap Tool</strong> to swap to the Manipulation Tool </li>
+          <li>Navigate to <strong>Tools &gt; Manipulation Tool</strong>.</li>
+          <li>Press the <strong>Pickup</strong> Button or <strong>Shortcut: U</strong> Key to pickup or drop objects.</li>
+          <li>To move or throw objects, press <strong>G</strong> to move the tool around in the viewport, then press <strong>left-click quickly followed by U</strong>.</li>
+          <li><strong>Note:</strong> Due to a Blender limitation, you can't move and throw at the same time — you must first stop moving with <strong>left-click</strong>.</li>
         </ol>
       </div>
     </details>
@@ -180,10 +203,10 @@
                     <div><strong>Dynamic Pickup</strong> – toggles field strength for grabbing or releasing objects.</div>
                   </li>
                   <li class="setting">
-                    <div><strong>Drag</strong> – Sets the strength value to -500 for dragging objects .</div>
+                    <div><strong>Drag</strong> – Sets the strength value to -500 for dragging objects.</div>
                   </li>
                   <li class="setting">
-                    <div><strong>Strength</strong> – Controls how strong the attraction force is.</div>
+                    <div><strong>Strength</strong> – controls how strong the attraction force is.</div>
                   </li>
                   <li class="setting">
                     <div>Quick tip: press <kbd>U</kbd> – switch between pickup and drop modes.</div>
@@ -196,28 +219,28 @@
             <details>
               <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><em>Simulation Tools</em></summary>
               <div class="content">
-                <p class="tool-desc">Tool for managing or adjusting your simulated objects</p>
+                <p class="tool-desc">Tool for managing or adjusting your simulated objects.</p>
 
                 <ul class="setting-list">
                   <li class="setting">
-                    <div><strong>Add Physics</strong> – Add physics to selected objects.</div>
+                    <div><strong>Add Physics</strong> – add physics to selected objects.</div>
                   </li>
                   <li class="setting">
-                    <div><strong>Set Passive</strong> – Turns selected objects into a static collision object.</div>
+                    <div><strong>Set Passive</strong> – turns selected objects into a static collision object.</div>
                   </li>
                   <li class="setting">
-                    <img src="media/duplicate.gif" alt="Infinite spawn setting example" class="setting-placeholder">
-                    <div><strong>Duplicate</strong> – Duplicates the selected objects.</div>
+                    <img src="media/duplicate.gif" alt="Duplicate example" class="setting-placeholder">
+                    <div><strong>Duplicate</strong> – duplicates the selected objects.</div>
                   </li>
                   <li class="setting">
-                    <img src="media/move.gif" alt="Infinite spawn setting example" class="setting-placeholder">
-                    <div><strong>Move</strong> – enable Objects to be moved. (Must pause before enabling).</div>
+                    <img src="media/move.gif" alt="Move example" class="setting-placeholder">
+                    <div><strong>Move</strong> – enables objects to be moved (must pause before enabling).</div>
                   </li>
                   <li class="setting">
-                    <div><strong>Freeze</strong> – converts selected active physics objects to passive. Useful for freezing selected objects in place when finished.</div>
+                    <div><strong>Freeze</strong> – converts selected active physics objects to passive; useful for freezing objects when finished.</div>
                   </li>
                   <li class="setting">
-                    <div><strong>Remove Physics</strong> – Completely removes physics from selected objects.</div>
+                    <div><strong>Remove Physics</strong> – completely removes physics from selected objects.</div>
                   </li>
                 </ul>
               </div>
@@ -227,7 +250,7 @@
             <details>
               <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><em>Quick Array Grid</em></summary>
               <div class="content">
-                <p class="tool-desc">An alternative tool to array spawning. This tool allows you to quickly array a single object.</p>
+                <p class="tool-desc">An alternative tool to array spawning. Quickly array a single object.</p>
                 <img src="media/quick array.gif" alt="Quick Array Grid overview" class="section-placeholder">
 
                 <ul class="setting-list">
@@ -238,7 +261,7 @@
                     <div><strong>Gap X/Y/Z</strong> – spacing between objects.</div>
                   </li>
                   <li class="setting">
-                    <div>Note: Quick array objects do not include physics. Select and press the add physics button to add physics.</div>
+                    <div>Note: Quick‑array objects do not include physics. Select and press “Add Physics” to add physics.</div>
                   </li>
                 </ul>
               </div>
@@ -253,7 +276,7 @@
 
                 <ul class="setting-list">
                   <li class="setting">
-                    <div><strong>Add Cloth</strong> – Adds a cloth simulation to the selected objects.</div>
+                    <div><strong>Add Cloth</strong> – adds a cloth simulation to the selected objects.</div>
                   </li>
                   <li class="setting">
                     <div><strong>Add Collisions</strong> – create colliders for cloth objects.</div>
@@ -262,7 +285,7 @@
                     <div><strong>Remove Collisions</strong> – remove colliders from the selected objects.</div>
                   </li>
                   <li class="setting">
-                    <div><strong>Apply Cloth</strong> – Applies the cloth simulation.</div>
+                    <div><strong>Apply Cloth</strong> – applies the cloth simulation.</div>
                   </li>
                 </ul>
               </div>
@@ -281,20 +304,20 @@
               <div class="content">
                 <ul class="setting-list">
                   <li class="setting">
-                    <img src="media/split impulse.gif" alt="Infinite spawn setting example" class="setting-placeholder">
-                    <div><strong>Split Impulse</strong> – Reduces physics velocity applied to objects. Off = more explosive force / On = less force.</div>
+                    <img src="media/split impulse.gif" alt="Split Impulse example" class="setting-placeholder">
+                    <div><strong>Split Impulse</strong> – reduces physics velocity applied to objects: off = more explosive force; on = less force.</div>
                   </li>
                   <li class="setting">
-                    <div><strong>Friction/Bounce</strong> – Adjusts the level of friction and bounce of objects.</div>
+                    <div><strong>Friction/Bounce</strong> – adjusts the level of friction and bounce of objects.</div>
                   </li>
                   <li class="setting">
-                    <div><strong>Collision Shape</strong> – adjusts the collision type for each object. Convex hull = faster but less accurate, Mesh = slower but more accurate.</div>
+                    <div><strong>Collision Shape</strong> – adjusts the collision type for each object: Convex Hull = faster but less accurate, Mesh = slower but more accurate.</div>
                   </li>
                   <li class="setting">
                     <div><strong>Set as Default</strong> – save current parameters as defaults for newly spawned objects.</div>
                   </li>
                   <li class="setting">
-                    <div><strong>Origin Tools</strong> – quickly switch the origin to center or base of objects; helpful for scattering vs. simulation tasks.</div>
+                    <div><strong>Origin Tools</strong> – quickly switch the origin to the centre or base of objects (helpful for scattering vs. simulation tasks).</div>
                   </li>
                 </ul>
               </div>
@@ -312,24 +335,27 @@
       <div class="content">
         <ul class="setting-list">
           <li class="setting">
-            <div><strong>Objects pass through floor</strong> – ensure the floor object is set to <em>Passive</em> and that its <strong>Collision Shape</strong> is appropriate (e.g. BOX for cubes, MESH for complex geometry).</div>
+            <div><strong>Objects are falling through the mesh</strong> – ensure the floor object is set to <em>Passive</em> and that its <strong>Collision Shape</strong> is appropriate (e.g., BOX for cubes, MESH for complex geometry). Thin or small objects may still pass through the mesh due to simulation limitations within Blender.</div>
           </li>
           <li class="setting">
-            <div><strong>Pile explodes on impact</strong> – lower <em>Bounce</em> (<code>phystool_adjust_bounce</code>) and enable <em>Split Impulse</em>.</div>
+            <div><strong>Objects are exploding when the simulation is playing</strong> – if <em>Split Impulse</em> is already enabled, try disabling and re‑enabling it. If objects are intersecting with each other, try increasing the spacing.</div>
           </li>
           <li class="setting">
-            <div><strong>Viewport performance is reduced</strong> – activate <em>Link Mesh Data</em> for instancing or <em>Skip Rigid Bodies</em> for static decoration.</div>
+            <div><strong>Viewport performance</strong> – viewport performance depends on various factors such as PC specs, poly count of scattered meshes, poly count of collision meshes, and the number of scattered objects. To keep performance manageable, optimise meshes for your scene and scatter small clusters of objects, freeze them, then scatter more.</div>
+          </li>
+          <li class="setting">
+            <div><strong>Cloth is clipping through mesh</strong> – navigate to the <em>Physics</em> tab on your collision object and enable “Single‑Sided.”</div>
+          </li>
+          <li class="setting">
+            <div><strong>Objects won't fall into container</strong> – for objects with a hole (e.g., containers), make sure the <strong>Collision Shape</strong> is set to <em>Mesh</em>.</div>
+          </li>
+          <li class="setting">
+            <div><strong>Cloth is clipping through itself</strong> – navigate to the <em>Physics</em> tab on your cloth object and enable “Self Collisions.”</div>
+          </li>
+          <li class="setting">
+            <div><strong>Scattered objects keep resetting in the scene</strong> If an object is adjusted after frame 1, the simulation will reset. It's recommended to make any changes before the simulation has started. Alternatively, you can freeze the objects first, then make your adjustments.”</div>
           </li>
         </ul>
-      </div>
-    </details>
-
-    <!-- FAQ -->
-    <details id="faq">
-      <summary><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>FAQ &amp; Tips</summary>
-      <div class="content">
-        <p><strong>Q:</strong> How do I replay the simulation?<br><strong>A:</strong> Scrub the timeline or press <kbd>Space</kbd>—Blender automatically caches the rigid‑body simulation.</p>
-        <p><strong>Q:</strong> Can I use custom force curves?<br><strong>A:</strong> Convert the spawn sphere to a force‑field (<em>Swap Tool</em>) and adjust <em>Strength</em> and <em>Flow</em>.</p>
       </div>
     </details>
 
